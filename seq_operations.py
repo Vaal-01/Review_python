@@ -1,6 +1,10 @@
 
 #Ejercicio 1
 def vendedor(sueldo,venta1,venta2,venta3):
+    sueldo = float(sueldo)
+    venta1 = float(venta1)
+    venta2 = float(venta2)
+    venta3 = float(venta3)
     salario= sueldo+(venta1+venta2+venta3)*0.1
     return salario
 
@@ -12,7 +16,12 @@ def compra(valor_compra):
 
 #Ejercicio 3
 def aprendiz(parcial1,parcial2,parcial3,examen,trabajo):
-    nota_final=((parcial1+parcial2+parcial3)/3)*0.55+(examen*0.3)+(trabajo*0.15)
+    parcial1 = float(parcial1)
+    parcial2 = float(parcial2)
+    parcial3 = float(parcial3)
+    examen = float(examen)
+    trabajo = float(trabajo)
+    nota_final=round((((parcial1+parcial2+parcial3)/3)*0.55+(examen*0.3)+(trabajo*0.15)),4)
     return nota_final
 
 #Ejercicio 4

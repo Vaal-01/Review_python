@@ -2,9 +2,9 @@ from tkinter import *
 from tkinter import messagebox
 from PIL import Image,ImageTk
 import main
-from transitions import get_enunciado,get_entrada1,get_entrada2,get_entrada3,get_entrada4,process4,get_salida1
+from transitions import get_enunciado,get_entrada1,get_entrada2,get_entrada3,get_entrada4,get_entrada5,process5,get_salida1
 
-class fourEntryView:
+class fiveEntryView:
     def __init__(self,window):
         #Format Window
         self.window = window
@@ -15,59 +15,67 @@ class fourEntryView:
 
         #BACKGROUND
         self.database_frame = ImageTk.PhotoImage\
-            (file='img\imgframes\sfourentry_frame.png')
+            (file='img\imgframes\sfiveentry_frame.png')
         self.image_panel = Label(self.window,image=self.database_frame)
         self.image_panel.pack(fill='both',expand='yes')
 
         #LABELS 
 
         #Enunciado
-        self.enunciado = Label(self.window, text=str(get_enunciado()), bg="white", fg="#353534",font=("yu gothic ui", 18, "bold"))
-        self.enunciado.place(x=180, y=94)
+        self.enunciado = Label(self.window, text=str(get_enunciado()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))
+        self.enunciado.place(x=180, y=78)
 
         #Salida
         self.print = Label(self.window, text=str(get_salida1()), bg="white", fg="#353534",font=("yu gothic ui", 18, "bold"))
-        self.print.place(x=810, y=425)
+        self.print.place(x=810, y=362)
 
         #Entrada 1
         self.entry = Label(self.window, text=str(get_entrada1()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))
-        self.entry.place(x=150, y=362)
+        self.entry.place(x=150, y=296)
 
         #Entrada 2
         self.entry2 = Label(self.window, text=str(get_entrada2()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))
-        self.entry2.place(x=355, y=362)
+        self.entry2.place(x=355, y=296)
 
         #Entrada 3
         self.entry3 = Label(self.window, text=str(get_entrada3()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))
-        self.entry3.place(x=150, y=480)
+        self.entry3.place(x=150, y=402)
 
         #Entrada 4
         self.entry4 = Label(self.window, text=str(get_entrada4()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))
-        self.entry4.place(x=355, y=480)
+        self.entry4.place(x=355, y=402)
+
+        #Entrada 5
+        self.entry5 = Label(self.window, text=str(get_entrada5()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))
+        self.entry5.place(x=285, y=512)
 
         #INPUTS
         #1Entry
         self.one_entry = Entry(self.window, relief=FLAT,bg = "white",fg ="#6b6a69",font=("yu gothic ui semibold", 14))
-        self.one_entry.place(x=170,y=394,width=120)
+        self.one_entry.place(x=170,y=330,width=120)
 
         #2Entry
         self.two_entry = Entry(self.window, relief=FLAT,bg = "white",fg ="#6b6a69",font=("yu gothic ui semibold", 14))
-        self.two_entry.place(x=380,y=394,width=120)
+        self.two_entry.place(x=375,y=330,width=120)
 
         #3Entry
         self.three_entry = Entry(self.window, relief=FLAT,bg = "white",fg ="#6b6a69",font=("yu gothic ui semibold", 14))
-        self.three_entry.place(x=170,y=512,width=120)
+        self.three_entry.place(x=170,y=440,width=120)
 
         #4Entry
         self.four_entry = Entry(self.window, relief=FLAT,bg = "white",fg ="#6b6a69",font=("yu gothic ui semibold", 14))
-        self.four_entry.place(x=380,y=512,width=120)
+        self.four_entry.place(x=375,y=440,width=120)
+
+        #5Entry
+        self.five_entry = Entry(self.window, relief=FLAT,bg = "white",fg ="#6b6a69",font=("yu gothic ui semibold", 14))
+        self.five_entry.place(x=285,y=545,width=120)
 
         #BUTTON
         #Calculate
         self.submit = ImageTk.PhotoImage\
-            (file='img\imgframes\sbtnonecalculate.png')
-        self.submit_button = Button(self.window,image=self.submit, relief = "flat", borderwidth=0, background="#fecd63",activebackground="#fecd63", cursor="hand2", command=self.calculate)
-        self.submit_button.place(x=190,y=585)
+            (file='img\imgframes\sbtnonecalculate2.png')
+        self.submit_button = Button(self.window,image=self.submit, relief = "flat", borderwidth=0, background="#feda5f",activebackground="#feda5f", cursor="hand2", command=self.calculate)
+        self.submit_button.place(x=500,y=615)
 
         #Exit
         self.exit_img = ImageTk.PhotoImage \
@@ -86,15 +94,16 @@ class fourEntryView:
         valor2 = self.two_entry.get()
         valor3 = self.three_entry.get()
         valor4 = self.four_entry.get()
+        valor5 = self.five_entry.get()
         #Null validation 
-        if valor1 == "" or  valor2 == "" or  valor3 == "" or  valor4 == "":
+        if valor1 == "" or  valor2 == "" or valor3 == "" or valor4 == "" or valor5 == "":
             messagebox.showerror("Incompleto", "Por favor, Ingresa los datos solicitados")
         else:
-            process4(valor1,valor2,valor3,valor4)
+            process5(valor1,valor2,valor3,valor4,valor5)
             self.print['text']= get_salida1()
         
     
 def win():
     window = Tk()
-    fourEntryView(window)
+    fiveEntryView(window)
     window.mainloop()

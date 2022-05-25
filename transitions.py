@@ -8,6 +8,8 @@ salida1=""
 entrada1=""
 entrada2=""
 entrada3=""
+entrada4=""
+entrada5=""
 
 
 def asignar(num):
@@ -25,6 +27,12 @@ def get_entrada2():
     
 def get_entrada3():
     return entrada3
+
+def get_entrada4():
+    return entrada4
+
+def get_entrada5():
+    return entrada5
     
 def get_temp():
     return temp
@@ -34,11 +42,24 @@ def get_salida1():
 
 #Return data    
 def get_enunciado():
-    global enunciado,entrada,salida1,entrada1,entrada2,entrada3
+    global enunciado,entrada,salida1,entrada1,entrada2,entrada3,entrada4,entrada5
     salida1=""
+    if get_temp()==1:
+        enunciado="Un vendedor recibe un sueldo base más un 10% extra por comisión de sus ventas, el \nvendedor desea saber cuánto dinero obtendrá por concepto\n de comisiones por las tres ventas que realiza en el mes y el \ntotal que recibirá en el mes tomando en cuenta su sueldo base y comisiones"
+        entrada1="Sueldo Base"
+        entrada2="Primera venta"
+        entrada3="Segunda venta"
+        entrada4="Tercera venta"
     if get_temp()==2:
         enunciado="Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente \n desea saber cuánto deberá pagar finalmente por su compra."
         entrada="Valor Compra"
+    if get_temp()==3:
+        enunciado="Un aprendiz desea saber cuál será su calificación final en la materia de Algoritmos. Dicha \n calificación se compone de los siguientes porcentajes: \n 55% del promedio de sus tres calificaciones parciales, 30% de la calificación \n del examen final y 15% de la calificación de un trabajo final"
+        entrada1="Parcial 1"
+        entrada2="Parcial 2"
+        entrada3="Parcial 3"
+        entrada4="Examen Final"
+        entrada5="Trabajo Final"
     if get_temp()==4:
         enunciado="Programa para calcular el porcentaje de mujeres y hombres que hay dentro\n de un grupo de estudiantes"
         entrada1="Cantidad Mujeres"
@@ -95,3 +116,15 @@ def process3(valor1,valor2,valor3):
         salida1="El porcentaje de inversión del \n1 socio es de: "+ str(seq_operations.inversion(valor1,valor2,valor3)[0]) +"%, del 2 socio \nde: "+ str(seq_operations.inversion(valor1,valor2,valor3)[1]) +"% y del 3 socio \nde: " + str(seq_operations.inversion(valor1,valor2,valor3)[2]) + "%"
     if get_temp()==11: 
         salida1="La masa del aire es\n de: "+ str(seq_operations.masa(valor1,valor2,valor3))
+
+def process4(valor1,valor2,valor3,valor4):
+    global salida1
+    salida1=""
+    if get_temp()==1:
+        salida1="El salario del vendedor es \nde: "+ str(seq_operations.vendedor(valor1,valor2,valor3,valor4))
+
+def process5(valor1,valor2,valor3,valor4,valor5):
+    global salida1
+    salida1=""
+    if get_temp()==3:
+         salida1="La nota final del estudiante \nes de: " +str(seq_operations.aprendiz(valor1,valor2,valor3,valor4,valor5))
