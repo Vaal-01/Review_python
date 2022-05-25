@@ -27,7 +27,7 @@ class oneEntryView:
 
         #Salida
         self.print = Label(self.window, text=str(get_salida1()), bg="white", fg="#353534",font=("yu gothic ui", 18, "bold"))
-        self.print.place(x=790, y=405)
+        self.print.place(x=780, y=385)
 
         #Entrada
         self.entry = Label(self.window, text=str(get_entrada()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))

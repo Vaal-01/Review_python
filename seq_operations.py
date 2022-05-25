@@ -39,16 +39,19 @@ def equivalencia(cpesos,ucambiaria):
 
 #Ejercicio 7
 def pulsaciones(edad):
+    edad = float(edad)
     num_pulsaciones=(220-edad)/10
     return num_pulsaciones
 
 #Ejercicio 8
 def obrero(salario_anterior):
+    salario_anterior = float(salario_anterior)
     nuevo_salario= salario_anterior + (salario_anterior*0.25)
     return nuevo_salario
 
 #Ejercicio 9
 def ganancia(precio):
+    precio=float(precio)
     venta=precio + (precio*0.30)
     return venta
 
