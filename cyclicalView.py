@@ -91,10 +91,9 @@ class cyclicalView:
        process()
     
     def fun3(self):
-       messagebox.showinfo("Un momento", "Por favor, Espere mientras pasan 6 segundos")
+       messagebox.showinfo("Un momento", "Por favor, Espere mientras pasan 9 segundos")
        asignar(25)
        functionsseq(self)
-       
        process()
     
     def fun4(self):
@@ -104,9 +103,12 @@ class cyclicalView:
 
     def fun5(self):
        asignar(27)
+       functionsseq(self)
+       process()
     
     def fun6(self):
        asignar(28)
+       process()
 
     def fun7(self):
        asignar(29)
@@ -118,7 +120,6 @@ class cyclicalView:
     
 def functionsseq(self):
     #Cambio de vista
-
     win = Toplevel()
     onlyprintView.onlyprintView(win)
     self.window.withdraw()

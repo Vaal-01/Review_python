@@ -1,4 +1,4 @@
-from http.client import ImproperConnectionState
+from tkinter import messagebox
 from tkinter import *
 from tkinter import simpledialog
 import time
@@ -19,6 +19,7 @@ prom_ado=0
 prom_jov=0
 prom_adul=0
 prom_viejo=0
+ganancia=0
 
 #Ejercicio 1
 def positivo():
@@ -45,7 +46,7 @@ def reloj():
     impresion="Reloj Digital\n"
     for h in range(1):
         for m in range(1):
-            for s in range(7):
+            for s in range(10):
                 impresion+=str(h)+":"+str(m)+":"+str(s)+"\n"
                 time.sleep(1)
     return impresion
@@ -61,7 +62,7 @@ def promedio():
         peso=simpledialog.askinteger(title="Ejercicio4",prompt="Ingrese el peso de la persona "+str(i+1))
         peso=float(peso)
         if edad<0:
-            impresion="Edad de la persona "+str(i+1) +" inválida"
+            impresion="Edad de la persona "+str(i+1) +" inválida \n"
         elif edad<=12:
             peso_nino=peso_nino+peso
             cant_nino=cant_nino+1
@@ -89,6 +90,36 @@ def promedio():
     impresion+="Promedio de peso de adultos: "+str(prom_adul)+"\n"
     impresion+="Promedio de peso de viejos: "+str(prom_viejo)+"\n"
     return impresion
+
+#Ejercicio 5
+def ganancias():
+    global ganancia
+    impresion="Resultados\n"
+    precio=simpledialog.askinteger(title="Ejercicio5",prompt="Ingrese el precio del kilo de naranjas")
+    precio=float(precio)
+    for i in range(10):
+        kilos=simpledialog.askinteger(title="Ejercicio5",prompt="Ingrese  la cantidad de kilos de naranjas a comprar de la persona "+str(i+1))
+        kilos=int(kilos)
+        if kilos<0:
+            impresion+="Cantidad inválida para la persona "+str(i+1) +"\n"  
+        elif kilos>10:
+            total=(precio*kilos)-((precio*kilos)*0.15)
+            impresion+="Se aplicó un descuento de 15% para la persona "+str(i+1) +" y debe pagar: " +str(total) +"\n"
+        else:
+            total=precio*kilos
+            impresion+="La persona "+str(i+1) +" debe pagar: " +str(total) +"\n" 
+        ganancia=ganancia+total
+    impresion+="La ganancia obtenida de la tienda fue COP " +str(ganancia)
+    return impresion
+
+#Ejercicio 6
+def tablas():
+    for i in range(10):
+        impresion=""
+        impresion+="TABLA DE MULTIPLICAR DEL "+str(i+1)+"\n"
+        for j in range(10):
+            impresion+=str(i+1) +"x"+ str(j+1) +"=" + str((i+1)*(j+1))+"\n"
+        messagebox.showinfo("Tabla de multiplicar",impresion)
 
 #Ejercicio 7
 def primo(num):

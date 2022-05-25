@@ -152,9 +152,13 @@ def get_enunciado():
     if get_temp()==24:
         enunciado="Este programa leyó 15 números, convierte negativos a positivos y los imprime"
     if get_temp()==25:
-        enunciado="Este programa simula el comportamiento de un reloj digital (Solo 6 segundos)"
+        enunciado="Este programa simula el comportamiento de un reloj digital (Solo 9 segundos)"
     if get_temp()==26:
         enunciado="Este programa determina el promedio de peso de los niños, jóvenes, adultos y viejos."
+    if get_temp()==27:
+        enunciado="Programa para saber el pago de cada cliente y la ganancia de la empresa de naranjas"
+    if get_temp()==28:
+        enunciado="Este programa muestra las tablas de multiplicar del 1 al 10"
     if get_temp()==29:
         enunciado="Este programa muestra si un número cualquiera es primo"
         entrada="Número"
@@ -174,6 +178,10 @@ def process():
         salida1= str(cic_operations.reloj())
     if get_temp()==26:
         salida1= str(cic_operations.promedio())
+    if get_temp()==27:
+        salida1= str(cic_operations.ganancias())
+    if get_temp()==28:
+        salida1= str(cic_operations.tablas())
 
 def process1(valor):
     global salida1
