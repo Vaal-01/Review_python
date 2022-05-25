@@ -17,9 +17,11 @@ def aprendiz(parcial1,parcial2,parcial3,examen,trabajo):
 
 #Ejercicio 4
 def porcentajes(cant_mujeres,cant_hombres):
+    cant_mujeres = float(cant_mujeres)
+    cant_hombres = float(cant_hombres)
     total=cant_mujeres+cant_hombres
-    porcentaje_mujeres= (cant_mujeres/total)*100
-    porcentaje_hombres= (cant_hombres/total)*100
+    porcentaje_mujeres= round(((cant_mujeres/total)*100),2)
+    porcentaje_hombres= round(((cant_hombres/total)*100),2)
     return porcentaje_mujeres,porcentaje_hombres
 
 #Ejercicio 5
@@ -34,6 +36,8 @@ def edad(ano_nacimiento,mes_nacimiento,dia_nacimiento,ano_actual,mes_actual,dia_
 
 #Ejercicio 6
 def equivalencia(cpesos,ucambiaria):
+    cpesos = float(cpesos)
+    ucambiaria = float(ucambiaria)
     equivalencia=cpesos/ucambiaria
     return equivalencia
 
@@ -57,14 +61,20 @@ def ganancia(precio):
 
 #Ejercicio 10
 def inversion(inversion1,inversion2,inversion3):
+    inversion1 = float(inversion1)
+    inversion2 = float(inversion2)
+    inversion3 = float(inversion3)
     total=inversion1+inversion2+inversion3
-    porcentaje1=(inversion1/total)*100
-    porcentaje2=(inversion2/total)*100
-    porcentaje3=(inversion3/total)*100
-    #Revisar return
+    porcentaje1=round(((inversion1/total)*100),2)
+    porcentaje2=round(((inversion2/total)*100),2)
+    porcentaje3=round(((inversion3/total)*100),2)
+    return porcentaje1,porcentaje2,porcentaje3
 
 #Ejercicio 11
 def masa(presion,volumen,temperatura):
+    presion = float(presion)
+    volumen = float(volumen)
+    temperatura = float(temperatura)
     masa=(presion*volumen)/(0.37*(temperatura+460))
     return masa
 
