@@ -115,7 +115,7 @@ class conditionalView:
 
     def fun5(self):
        asignar(16)
-       functionsseq2(self)
+       functionsseq6(self)
     
     def fun6(self):
        asignar(17)
@@ -169,7 +169,13 @@ def functionsseq4(self):
     self.window.withdraw()
     win.deiconify()
          
-    
+def functionsseq6(self):
+    #Cambio de vista
+    win = Toplevel()
+    sixEntryView.sixEntryView(win)
+    self.window.withdraw()
+    win.deiconify() 
+
 def win():
     window = Tk()
     conditionalView(window)

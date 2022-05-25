@@ -23,7 +23,7 @@ class sixEntryView:
 
         #Enunciado
         self.enunciado = Label(self.window, text=str(get_enunciado()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))
-        self.enunciado.place(x=380, y=120)
+        self.enunciado.place(x=180, y=77)
 
         #Salida
         self.print = Label(self.window, text=str(get_salida1()), bg="white", fg="#353534",font=("yu gothic ui", 18, "bold"))

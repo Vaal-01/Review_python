@@ -113,6 +113,14 @@ def get_enunciado():
         enunciado="Programa para calcular el número de pulsaciones que debe tener una persona por \ncada 10 segundos de ejercicio aeróbico según su edad \ny género (1-Masculino o 2-Femenino)."
         entrada1="Edad"
         entrada2="Género"
+    if get_temp()==16:
+        enunciado="Se ha establecido un programa para estimular a los aprendices. Si el promedio obtenido por un\n aprendiz es mayor o igual que 4.5, se le hará un descuento del 30% sobre la \nmatrícula y no se le cobrara IVA; si el promedio obtenido es menor \nque 4.5 deberá pagar la matrícula completa, incluye el 10% de IVA."
+        entrada1="Costo Materia"
+        entrada2="Nota Materia 1"
+        entrada3="Nota Materia 2"
+        entrada4="Nota Materia 3"
+        entrada5="Nota Materia 4"
+        entrada6="Nota Materia 5"
     if get_temp()==17:
         enunciado="En un supermercado se hace una promoción, mediante la cual el cliente obtiene \nun descuento dependiendo de un número que se escoge al azar."
         entrada1="Valor Compra"
@@ -206,3 +214,5 @@ def process6(valor1,valor2,valor3,valor4,valor5,valor6):
     salida1=""
     if get_temp()==5:
          salida1="La edad de la persona \nes de: " +str(seq_operations.edad(valor1,valor2,valor3,valor4,valor5,valor6))
+    if get_temp()==16:
+         salida1=str(con_operations.matricula(valor1,valor2,valor3,valor4,valor5,valor6))

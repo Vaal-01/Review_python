@@ -57,36 +57,22 @@ def puls_genero(edad,genero):
         return impresion
 
 #Ejercicio 16
-def matricula(materias,costo):
-    #revisar
-    if  materias<=0:
-        print( 'Cantidad de materias no válida ')
-    elif  materias>5: 
-        print( 'Cantidad de materias no válida ')  
-    else:
-        if materias>=1 :
-            nota1=float(input('Ingrese la nota final de la materia 1:  '))
-            notas=nota1
-        if materias>=2 :
-            nota2=float(input('Ingrese la nota final de la materia 2:  '))
-            notas=nota1+nota2
-        if materias>=3 :
-            nota3=float(input('Ingrese la nota final de la materia 3:  '))
-            notas=nota1+nota2+nota3
-        if materias>=4 :
-            nota4=float(input('Ingrese la nota final de la materia 4:  '))
-            notas=nota1+nota2+nota3+nota4
-        if materias>=5 :
-            nota5=float(input('Ingrese la nota final de la materia 5:  '))
-            notas=nota1+nota2+nota3+nota4+nota5
-        promedio = notas/materias
-        if promedio>=4.5:
-            matricula=(costo*materias)-((costo*materias)*0.30)
-            print('El valor de matrícula con descuento del 30% que debe pagar el aprendiz es de:  ', matricula)
-        elif promedio<4.5:
-            if promedio>0:
-                matricula=(costo*materias)+(costo*materias)*0.10
-                print('El valor de matrícula más iva que debe pagar el aprendiz es de:  ', matricula)
+def matricula(costo,nota1,nota2,nota3,nota4,nota5):
+    costo=float(costo)
+    nota1=float(nota1)
+    nota2=float(nota2)
+    nota3=float(nota3)
+    nota4=float(nota4)
+    nota5=float(nota5)
+    notas=nota1+nota2+nota3+nota4+nota5             
+    promedio = notas/5
+    if promedio>=4.5:
+        matricula=(costo*5)-((costo*5)*0.30)
+        return ("El valor de matrícula \ncon descuento del 30% que \ndebe pagar el aprendiz \nes de: "+str(matricula))
+    elif promedio<4.5:
+        if promedio>0:
+            matricula=(costo*5)+(costo*5)*0.10
+            return ("El valor de matrícula \n más iva que debe pagar \nel aprendiz es de:  \n" +str(matricula))
 
 #Ejercicio 17
 def azar(total_compra,num_azar):
