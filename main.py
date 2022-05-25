@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image,ImageTk
-import cyclicalView, sequentialView,conditionalsView
+import cyclicalView, sequentialView,conditionalView
 
 
 class main:
@@ -60,7 +60,7 @@ class main:
     def funConditionals(self):
        #Cambio de vista
         win = Toplevel()
-        conditionalsView.conditionalsView(win)
+        conditionalView.conditionalView(win)
         self.window.withdraw()
         win.deiconify()
     

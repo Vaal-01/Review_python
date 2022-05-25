@@ -23,7 +23,7 @@ class oneEntryView:
 
         #Enunciado
         self.enunciado = Label(self.window, text=str(get_enunciado()), bg="white", fg="#353534",font=("yu gothic ui", 18, "bold"))
-        self.enunciado.place(x=210, y=125)
+        self.enunciado.place(x=200, y=100)
 
         #Salida
         self.print = Label(self.window, text=str(get_salida1()), bg="white", fg="#353534",font=("yu gothic ui", 18, "bold"))
@@ -31,7 +31,7 @@ class oneEntryView:
 
         #Entrada
         self.entry = Label(self.window, text=str(get_entrada()), bg="white", fg="#353534",font=("yu gothic ui", 16, "bold"))
-        self.entry.place(x=284, y=365)
+        self.entry.place(x=270, y=365)
 
         #INPUTS
         #1Entry
