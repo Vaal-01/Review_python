@@ -10,7 +10,7 @@ entrada2=""
 entrada3=""
 entrada4=""
 entrada5=""
-
+entrada6=""
 
 def asignar(num):
     global temp
@@ -33,6 +33,9 @@ def get_entrada4():
 
 def get_entrada5():
     return entrada5
+
+def get_entrada6():
+    return entrada6
     
 def get_temp():
     return temp
@@ -42,7 +45,7 @@ def get_salida1():
 
 #Return data    
 def get_enunciado():
-    global enunciado,entrada,salida1,entrada1,entrada2,entrada3,entrada4,entrada5
+    global enunciado,entrada,salida1,entrada1,entrada2,entrada3,entrada4,entrada5,entrada6
     salida1=""
     if get_temp()==1:
         enunciado="Un vendedor recibe un sueldo base más un 10% extra por comisión de sus ventas, el \nvendedor desea saber cuánto dinero obtendrá por concepto\n de comisiones por las tres ventas que realiza en el mes y el \ntotal que recibirá en el mes tomando en cuenta su sueldo base y comisiones"
@@ -64,6 +67,14 @@ def get_enunciado():
         enunciado="Programa para calcular el porcentaje de mujeres y hombres que hay dentro\n de un grupo de estudiantes"
         entrada1="Cantidad Mujeres"
         entrada2="Cantidad Hombres"
+    if get_temp()==5:
+        enunciado="Programa para calcular la edad de una persona"
+        entrada1="Año Nacimiento"
+        entrada2="Mes Nacimiento"
+        entrada3="Día Nacimiento"
+        entrada4="Año Actual"
+        entrada5="Mes Actual"
+        entrada6="Día Actual"
     if get_temp()==6:
         enunciado="Programa para calcular la equivalencia de pesos colombianos a dólares"
         entrada1="Pesos"
@@ -128,3 +139,9 @@ def process5(valor1,valor2,valor3,valor4,valor5):
     salida1=""
     if get_temp()==3:
          salida1="La nota final del estudiante \nes de: " +str(seq_operations.aprendiz(valor1,valor2,valor3,valor4,valor5))
+
+def process6(valor1,valor2,valor3,valor4,valor5,valor6):
+    global salida1
+    salida1=""
+    if get_temp()==5:
+         salida1="La edad de la persona \nes de: " +str(seq_operations.edad(valor1,valor2,valor3,valor4,valor5,valor6))

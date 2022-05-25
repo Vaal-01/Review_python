@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import Image,ImageTk
-import main,oneEntryView,twoEntryView,threeEntryView,fourEntryView,fiveEntryView
+import main,oneEntryView,twoEntryView,threeEntryView,fourEntryView,fiveEntryView,sixEntryView
 from transitions import asignar
 
 class sequentialView:
@@ -161,7 +161,6 @@ def functionsseq3(self):
     threeEntryView.threeEntryView(win)
     self.window.withdraw()
     win.deiconify()
-    
 
 def functionsseq4(self):
     #Cambio de vista
@@ -178,7 +177,11 @@ def functionsseq5(self):
     win.deiconify()
 
 def functionsseq6(self):
-       pass
+    #Cambio de vista
+    win = Toplevel()
+    sixEntryView.sixEntryView(win)
+    self.window.withdraw()
+    win.deiconify()       
     
 def win():
     window = Tk()

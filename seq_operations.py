@@ -35,6 +35,13 @@ def porcentajes(cant_mujeres,cant_hombres):
 
 #Ejercicio 5
 def edad(ano_nacimiento,mes_nacimiento,dia_nacimiento,ano_actual,mes_actual,dia_actual):
+    ano_nacimiento = float(ano_nacimiento)
+    mes_nacimiento = float(mes_nacimiento)
+    dia_nacimiento = float(dia_nacimiento)
+    ano_actual = float(ano_actual)
+    mes_actual = float(mes_actual)
+    dia_actual = float(dia_actual)
+
     edad = ano_actual - ano_nacimiento
     if mes_nacimiento>mes_actual:
         edad=edad-1
