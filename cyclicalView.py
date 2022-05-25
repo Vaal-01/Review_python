@@ -13,7 +13,7 @@ class cyclicalView:
 
         #BACKGROUND
         self.database_frame = ImageTk.PhotoImage\
-            (file='img\imgframes\info_frame.png')
+            (file='img\imgframes\cic_frame.png')
         self.image_panel = Label(self.window,image=self.database_frame)
         self.image_panel.pack(fill='both',expand='yes')
 

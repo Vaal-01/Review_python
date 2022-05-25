@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image,ImageTk
-import infoView, cyclicalView, sequentialView,conditionalsView
+import cyclicalView, sequentialView,conditionalsView
 
 
 class main:
