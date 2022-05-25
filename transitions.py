@@ -1,4 +1,4 @@
-import seq_operations, con_operations
+import seq_operations, con_operations,cic_operations
 
 #Global Variables
 temp=0
@@ -147,7 +147,33 @@ def get_enunciado():
         entrada2="Evaluación"
         entrada3="Trabajos"
         entrada4="Comportamiento"
+    if get_temp()==23:
+        enunciado="Este programa leyó 10 números e imprime solo los positivos"
+    if get_temp()==24:
+        enunciado="Este programa leyó 15 números, convierte negativos a positivos y los imprime"
+    if get_temp()==25:
+        enunciado="Este programa simula el comportamiento de un reloj digital (Solo 6 segundos)"
+    if get_temp()==26:
+        enunciado="Este programa determina el promedio de peso de los niños, jóvenes, adultos y viejos."
+    if get_temp()==29:
+        enunciado="Este programa muestra si un número cualquiera es primo"
+        entrada="Número"
+    if get_temp()==30:
+        enunciado="Este programa calcula e imprime la tabla de multiplicar de un número cualquiera"
+        entrada="Número"
     return enunciado
+
+def process():
+    global salida1
+    salida1=""
+    if get_temp()==23:
+        salida1= str(cic_operations.positivo())
+    if get_temp()==24:
+        salida1= str(cic_operations.conversion())
+    if get_temp()==25:
+        salida1= str(cic_operations.reloj())
+    if get_temp()==26:
+        salida1= str(cic_operations.promedio())
 
 def process1(valor):
     global salida1
@@ -166,6 +192,10 @@ def process1(valor):
         salida1=str(con_operations.icollantas(valor))
     if get_temp()==18:
         salida1="El número "+str(con_operations.romano(valor)[0]) + "\na Romano es: "+str(con_operations.romano(valor)[1])
+    if get_temp()==29:
+        salida1=str(cic_operations.primo(valor))
+    if get_temp()==30:
+        salida1=str(cic_operations.multiplicar(valor))    
 
 def process2(valor1,valor2):
     global salida1
