@@ -1,14 +1,12 @@
 
 #Ejercicio 1
-import re
-
-
 def vendedor(sueldo,venta1,venta2,venta3):
     salario= sueldo+(venta1+venta2+venta3)*0.1
     return salario
 
 #Ejercicio 2
 def compra(valor_compra):
+    valor_compra = float(valor_compra)
     valor_final= valor_compra - (valor_compra *0.15)
     return valor_final
 
